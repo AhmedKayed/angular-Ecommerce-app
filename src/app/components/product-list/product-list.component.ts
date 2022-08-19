@@ -9,10 +9,10 @@ import { HttpService } from 'src/app/services/http.service';
 })
 export class ProductListComponent implements OnInit {
   ProductList: product[]= [];
-  constructor(private HttpService:HttpService) { }
+  constructor(private httpService:HttpService) { }
 
   ngOnInit(): void {
-    // this.HttpService.getProducts().subscribe(products => { this.ProductList=products})
+    this.httpService.getProducts().subscribe(products => { this.ProductList=products})
   }
 
 }

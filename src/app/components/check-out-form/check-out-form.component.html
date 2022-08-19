@@ -1,0 +1,25 @@
+
+<form #form="ngForm" (ngSubmit)="onSubmit()">
+  <label>Full Name</label>
+  <input type="text" required minlength ="5"  name="name" [(ngModel)]="name"  #fname="ngModel">
+<br>
+<div *ngIf="fname.invalid && fname.dirty"><p class="error">Please enter a name with atleast 5 charchters</p></div>
+<br>
+  <label>Address</label>
+  <input type="text" required name="address" [(ngModel)]="address" #add="ngModel">
+  <br>
+<div *ngIf="add.invalid && add.dirty"><p class="error">Please enter an address</p></div>
+  <br>
+  <label>Credit Card Number</label>
+  <input type="number" required pattern="\d{16}" name="cardNumber" [(ngModel)]="cardNumber" #cnum="ngModel">
+  <br>
+<div *ngIf="cnum.invalid && cnum.dirty"><p class="error">Please enter a valid credit card number (16 numbers)</p></div>
+  <br>
+  <label>CVV</label>
+  <input type="number" required pattern="\d{3}" name="cvv" [(ngModel)]="cvv" #cv="ngModel" >
+<br>
+<div *ngIf="cv.invalid && cv.dirty"><p class="error">Please enter a valid cvv (3 numbers)</p></div>
+<br>
+    <input type="submit" [disabled]="form.invalid" value="Submit">
+
+</form>

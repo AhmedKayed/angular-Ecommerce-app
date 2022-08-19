@@ -1,1 +1,13 @@
-<p>cart works!</p>
+<div *ngIf="productsInCart.length>0">
+<app-cart-product  *ngFor="let product of productsInCart"  [product]="product" (remove)="removeFromCart(product)"></app-cart-product>
+<p> ${{ total}}</p>
+<app-check-out-form></app-check-out-form>
+</div>
+
+<div *ngIf="productsInCart.length===0">
+    <p> You currently have no items in your cart.</p>
+    <p> You can add products from <a routerLink="/">here</a>  </p>
+
+    </div>
+
+

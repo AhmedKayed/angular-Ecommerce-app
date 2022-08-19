@@ -1,1 +1,20 @@
-<p>product-item-detail works!</p>
+
+<div class ="detail-container">
+
+    <img  [src]="Product.url" [alt]="Product.description">
+    <p >{{ Product.name }}</p>
+    <p >${{ Product.price }}</p>
+    <p  class ="detail-item" >{{ Product.description }}</p>
+
+    <select #select (change)="setQuantity(select.value)" class ="select-input">
+    <option *ngFor="let item of [].constructor(10); let i = index" [value]="i+1">
+        <!-- To insert from 1 to 10 in the selector -->
+        {{ i+1 }}
+    </option>
+    </select>
+    
+    <button (click)="addToCart()" > Add To Cart</button>
+    <a routerLink="/"> <button class="back-link">Back to Home Page</button> </a>
+    
+    
+    </div>

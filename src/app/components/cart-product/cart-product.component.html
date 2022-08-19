@@ -1,0 +1,8 @@
+
+<a routerLink="/products/{{product.product.id}}"><img [src]="product.product.url"></a>
+
+
+<p>
+    {{ product.product.name}} Quantity = {{product.quantity}}  Total = {{product.quantity*product.product.price}}
+<button (click)="remove.emit(product)">Remove </button>
+</p>
