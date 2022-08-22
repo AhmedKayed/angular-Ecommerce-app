@@ -1,20 +1,29 @@
 
+
 <div class ="detail-container">
+    <h1>{{ product.name }}</h1> 
 
-    <img  [src]="Product.url" [alt]="Product.description">
-    <p >{{ Product.name }}</p>
-    <p >${{ Product.price }}</p>
-    <p  class ="detail-item" >{{ Product.description }}</p>
+    <div class="main-container">
+        <img  [src]="product.url" [alt]="product.description">
+    
 
-    <select #select (change)="setQuantity(select.value)" class ="select-input">
-    <option *ngFor="let item of [].constructor(10); let i = index" [value]="i+1">
-        <!-- To insert from 1 to 10 in the selector -->
-        {{ i+1 }}
-    </option>
-    </select>
+        <div class="secondary-container">
+            <p  class ="detail-item" >{{ product.description }}</p>
+            <p >${{ product.price }}</p>
     
-    <button (click)="addToCart()" > Add To Cart</button>
-    <a routerLink="/"> <button class="back-link">Back to Home Page</button> </a>
-    
-    
+            <select [(ngModel)]="quantity" class ="select-input">
+                <option *ngFor="let item of [].constructor(10); let i = index" [value]="i+1">
+                    <!-- To insert from 1 to 10 in the selector -->
+                    {{ i+1 }}
+                 </option>
+            </select>
+            <br>
+            <button (click)="addToCart()"> Add To Cart </button><br>
+
+            <a routerLink="/"> 
+                <button class="back-link">Back to Home Page</button> 
+            </a>
+        </div>
     </div>
+
+</div>

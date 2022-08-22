@@ -7,7 +7,7 @@ import { CartService } from 'src/app/services/cart.service';
   styleUrls: ['./product-item.component.css']
 })
 export class ProductItemComponent implements OnInit {
-  @Input() Product:product = new product();
+  @Input() product:product = new product();
   quantity:number = 1;
 
 // new Product() is just used so it wont be null
@@ -18,12 +18,7 @@ export class ProductItemComponent implements OnInit {
   }
 
   addToCart():void{
-    alert(this.Product.name+' has been added with quantity: '+ this.quantity);
-    this.cartService.addToCart(this.Product.id,this.quantity);
-  }
-
-  setQuantity(quantity:String):void{
-    this.quantity=Number(quantity);
+    this.cartService.addToCart(this.product.id,this.quantity);
   }
 
 

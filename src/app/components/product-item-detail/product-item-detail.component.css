@@ -1,25 +1,45 @@
+*{
+  margin-left: auto;
+  margin-right: auto;
+}
+
 img {
     border-radius: 10px;
-    width: 320px;
+    width: 280px;
+    border: 2px solid #000000;
+    box-sizing: border-box;
   }
 
   .select-input {
-    width: 108px; 
+    width: 60px; 
     margin-bottom: 8px;
   }
   
+  .main-container{
+    display: flex; 
+  }
+
   .detail-container {
-    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 64px;
+    margin-top: 15px;
+    width:40%;
+    text-align: center;
   }
-  
-  .detail-item {
-    margin-left: 128px;
-    margin-right: 128px;
-  }
+
   
   .back-link {
     margin-top: 8px;
+  }
+
+  .secondary-container{
+    text-align: center;
+    font-size: large;
+    width: 320px;
+  }
+  
+
+  button{
+    margin-top: 10px;
+    margin-bottom: 5px;
   }

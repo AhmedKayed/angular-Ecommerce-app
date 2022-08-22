@@ -1,9 +1,19 @@
 .header {
     text-align: center;
-    background: #33B5E5;
+    width: 100%;
+    background: #A66CFF;
     color: #fff;
-    padding: 12px;
+    padding: 1px;
+    padding-right: 0;
+    padding-left: 0;
   }
+
+.slogan{
+  font-size: smaller;
+  margin-top: -20px;
+  margin-bottom: -7px;
+  font-style: italic;
+}
   
   a {
     color: #ffffff;

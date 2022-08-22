@@ -8,11 +8,11 @@ import { HttpService } from 'src/app/services/http.service';
   styleUrls: ['./product-list.component.css']
 })
 export class ProductListComponent implements OnInit {
-  ProductList: product[]= [];
+  productList: product[]= [];
   constructor(private httpService:HttpService) { }
 
   ngOnInit(): void {
-    this.httpService.getProducts().subscribe(products => { this.ProductList=products})
+    this.httpService.getProducts().subscribe(products => { this.productList=products})
   }
 
 }

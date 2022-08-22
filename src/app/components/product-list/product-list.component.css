@@ -1,12 +1,13 @@
-.product-index {
-    display: flex;
-    flex-wrap: wrap;
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+
+  .grid-item {
+    padding: 20px;
+    text-align: center;
     justify-content: space-between;
     max-width: 1024px;
     margin-bottom: 64px;
-  }
-  
-  .product-container {
-    display: flex;
-    justify-content: center;
   }

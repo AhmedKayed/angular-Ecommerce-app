@@ -1,13 +1,20 @@
-<div *ngIf="productsInCart.length>0">
-<app-cart-product  *ngFor="let product of productsInCart"  [product]="product" (remove)="removeFromCart(product)"></app-cart-product>
-<p> ${{ total}}</p>
-<app-check-out-form></app-check-out-form>
-</div>
+<div class="cart-container">
+    <div *ngIf="productsInCart.length>0">
+        <app-cart-product *ngFor="let product of productsInCart" [product]="product" (remove)="removeFromCart(product)">
+        </app-cart-product>
+        <b>
+            <p class="p-total"> Cart Total = ${{total.toFixed(2)}}</p>
+        </b>
+    </div>
 
-<div *ngIf="productsInCart.length===0">
-    <p> You currently have no items in your cart.</p>
-    <p> You can add products from <a routerLink="/">here</a>  </p>
-
+    <div *ngIf="productsInCart.length>0">
+        <app-check-out-form></app-check-out-form>
     </div>
 
 
+</div>
+<div class="empty-cart-message" *ngIf="productsInCart.length===0">
+    <p> You currently have no items in your cart</p>
+    <p> You can add products from <a routerLink="/">here</a> </p>
+
+</div>

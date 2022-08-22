@@ -1,13 +1,13 @@
 .product-image {      
     list-style-type: none;
-    width: 290px;
-    padding: 20px;
+    width: 200px;
+    padding: 10px;
     margin: 6px 6px;        
-    border: 1px solid #33B5E5;
+    border: 2px solid #A66CFF;
   } 
   
   .product-container {
-    margin-top: 64px;
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -16,6 +16,10 @@
   }
   
   .select-input {
-    width: 108px; 
+    width: 86px; 
     margin-bottom: 8px;
+  }
+
+  h2{
+    margin-bottom: 0px;
   }

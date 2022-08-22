@@ -1,25 +1,44 @@
 
+<div class="form-container">
+
 <form #form="ngForm" (ngSubmit)="onSubmit()">
-  <label>Full Name</label>
-  <input type="text" required minlength ="5"  name="name" [(ngModel)]="name"  #fname="ngModel">
-<br>
-<div *ngIf="fname.invalid && fname.dirty"><p class="error">Please enter a name with atleast 5 charchters</p></div>
-<br>
-  <label>Address</label>
+
+
+  <label>Full Name </label>
+  <br>
+  <input type="text" required minlength="5" name="name" [(ngModel)]="name" #fname="ngModel">
+  <br>
+  <p class="error" *ngIf="fname.invalid && fname.dirty">Please enter a name with atleast 5 charchters</p>
+  <br *ngIf="!(fname.invalid && fname.dirty)">
+
+
+  <label>Address </label>
+  <br>
   <input type="text" required name="address" [(ngModel)]="address" #add="ngModel">
   <br>
-<div *ngIf="add.invalid && add.dirty"><p class="error">Please enter an address</p></div>
+  <p class="error" *ngIf="add.invalid && add.dirty">Please enter an address</p>
+  <br *ngIf="!(add.invalid && add.dirty)">
+
+
+  <label>Credit Card Number </label>
   <br>
-  <label>Credit Card Number</label>
   <input type="number" required pattern="\d{16}" name="cardNumber" [(ngModel)]="cardNumber" #cnum="ngModel">
   <br>
-<div *ngIf="cnum.invalid && cnum.dirty"><p class="error">Please enter a valid credit card number (16 numbers)</p></div>
+  <p class="error" *ngIf="cnum.invalid && cnum.dirty">Please enter a valid credit card number (16 numbers)</p>
+  <br *ngIf="!(cnum.invalid && cnum.dirty)">
+
+
+  <label>CVV </label>
   <br>
-  <label>CVV</label>
-  <input type="number" required pattern="\d{3}" name="cvv" [(ngModel)]="cvv" #cv="ngModel" >
-<br>
-<div *ngIf="cv.invalid && cv.dirty"><p class="error">Please enter a valid cvv (3 numbers)</p></div>
-<br>
-    <input type="submit" [disabled]="form.invalid" value="Submit">
+  <input type="number" required pattern="\d{3}" name="cvv" [(ngModel)]="cvv" #cv="ngModel">
+  <br>
+  <p class="error" *ngIf="cv.invalid && cv.dirty">Please enter a valid cvv (3 numbers)</p>
+  <br *ngIf="!(cv.invalid && cv.dirty)">
+
+  
+  <input class="center-button" type="submit" [disabled]="form.invalid" value="CheckOut">
+
 
 </form>
+
+</div>

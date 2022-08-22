@@ -1,4 +1,6 @@
-<h1>Products purchased Successfuly</h1>
-<p>You purchased {{NumberOfItems}} items(s)</p>
-<p>for ${{PriceOfItems}}</p>
-<p>Shop some more <a routerLink="/">here</a></p>
+<div class="confirmation-container">
+    <h1 class="confirmation-header"> Products purchased Successfuly </h1>
+    <p>You purchased {{numberOfItems}} item(s)</p>
+    <p>For ${{priceOfItems.toFixed(2)}}</p>
+    <p>You can shop some more <a routerLink="/">here</a> </p>
+</div>

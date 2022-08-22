@@ -10,17 +10,17 @@ import { CartService } from 'src/app/services/cart.service';
 export class CartComponent implements OnInit {
   productsInCart:cartProduct[]=[];
   total:number =0;
-  constructor(private CartService:CartService) { }
+  constructor(private cartService:CartService) { }
 
   ngOnInit(): void {
-    this.productsInCart=this.CartService.productsInCart();
-    this.total=this.CartService.cartTotal();
+    this.productsInCart=this.cartService.productsInCart();
+    this.total=this.cartService.cartTotal();
   }
 
   removeFromCart(product:cartProduct):void{
-    this.CartService.removeFromCart(product.product.id);
-    this.productsInCart=this.CartService.productsInCart();
-    this.total=this.CartService.cartTotal();
+    this.cartService.removeFromCart(product.product.id);
+    this.productsInCart=this.cartService.productsInCart();
+    this.total=this.cartService.cartTotal();
 
   }
 

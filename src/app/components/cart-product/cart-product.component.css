@@ -1,4 +1,25 @@
 img {
     border-radius: 10px;
-    width: 220px;
+    width: 80px;
+    height: 110px;
+    margin: 10px;
   }
+
+.border-container{
+  border: 3px solid #A66CFF;
+  margin-right: 50px;
+  display: flex;
+  width:400px;
+  height:140px;
+  
+}
+
+button{
+  width:100px;
+  height:20px;
+  margin-top: 12px;
+}
+
+p{
+  line-height: 22px;
+}

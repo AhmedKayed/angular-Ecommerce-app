@@ -1,8 +1,16 @@
+<div class="border-container">
+    <a routerLink="/products/{{product.product.id}}">
+        <img [src]="product.product.url">
+    </a>
 
-<a routerLink="/products/{{product.product.id}}"><img [src]="product.product.url"></a>
 
-
-<p>
-    {{ product.product.name}} Quantity = {{product.quantity}}  Total = {{product.quantity*product.product.price}}
-<button (click)="remove.emit(product)">Remove </button>
-</p>
+    <p>
+        <b>{{ product.product.name}}</b> 
+        <br> 
+        Quantity = {{product.quantity}}  
+        <br>
+        Total = ${{(product.quantity*product.product.price).toFixed(2)}} 
+        <br>
+        <button (click)="remove.emit(product)"> Remove </button>
+    </p>
+</div>
