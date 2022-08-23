@@ -6,7 +6,7 @@
     <h2>{{ product.name }}</h2>
     <p>${{ product.price }}</p>
 
-    <select [(ngModel)]="quantity" class="select-input">
+    <select [ngModel]="quantity" (ngModelChange)="quantity = $event"  class="select-input">
         <option *ngFor="let item of [].constructor(10); let i = index" [value]="i+1">
             <!-- To insert from 1 to 10 in the selector -->
             {{ i+1 }}

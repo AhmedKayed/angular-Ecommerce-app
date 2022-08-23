@@ -20,4 +20,23 @@ export class CheckOutFormComponent implements OnInit {
     this.router.navigateByUrl('/confirmation');
   }
 
+  nameChanged(name: string):void{
+    this.name=name;
+  }
+
+  
+  addressChanged(address: string):void{
+    this.address=address;
+  }
+
+  cardNumberChanged(cardNumber: number):void{
+    this.cardNumber=cardNumber;
+  }
+
+  
+  cvvChanged(cvv: number):void{
+    this.cvv=cvv;
+  }
+
+
 }

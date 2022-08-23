@@ -6,7 +6,7 @@
 
   <label>Full Name </label>
   <br>
-  <input type="text" required minlength="5" name="name" [(ngModel)]="name" #fname="ngModel">
+  <input type="text" required minlength="5" name="name" [(ngModel)]="name" (ngModelChange)="nameChanged($event)" #fname="ngModel">
   <br>
   <p class="error" *ngIf="fname.invalid && fname.dirty">Please enter a name with atleast 5 charchters</p>
   <br *ngIf="!(fname.invalid && fname.dirty)">
@@ -14,7 +14,7 @@
 
   <label>Address </label>
   <br>
-  <input type="text" required name="address" [(ngModel)]="address" #add="ngModel">
+  <input type="text" required name="address" [(ngModel)]="address" (ngModelChange)="addressChanged($event)" #add="ngModel">
   <br>
   <p class="error" *ngIf="add.invalid && add.dirty">Please enter an address</p>
   <br *ngIf="!(add.invalid && add.dirty)">
@@ -22,7 +22,7 @@
 
   <label>Credit Card Number </label>
   <br>
-  <input type="number" required pattern="\d{16}" name="cardNumber" [(ngModel)]="cardNumber" #cnum="ngModel">
+  <input type="number" required pattern="\d{16}" name="cardNumber" [(ngModel)]="cardNumber" (ngModelChange)="cardNumberChanged($event)" #cnum="ngModel">
   <br>
   <p class="error" *ngIf="cnum.invalid && cnum.dirty">Please enter a valid credit card number (16 numbers)</p>
   <br *ngIf="!(cnum.invalid && cnum.dirty)">
@@ -30,7 +30,7 @@
 
   <label>CVV </label>
   <br>
-  <input type="number" required pattern="\d{3}" name="cvv" [(ngModel)]="cvv" #cv="ngModel">
+  <input type="number" required pattern="\d{3}" name="cvv" [(ngModel)]="cvv" (ngModelChange)="cvvChanged($event)" #cv="ngModel">
   <br>
   <p class="error" *ngIf="cv.invalid && cv.dirty">Please enter a valid cvv (3 numbers)</p>
   <br *ngIf="!(cv.invalid && cv.dirty)">
